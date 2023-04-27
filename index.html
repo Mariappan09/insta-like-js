@@ -1,0 +1,58 @@
+ <!doctype html>
+ <html>
+ <head>
+ <title>Insta</title>
+ <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+ </head>
+<body>
+	<section class="instagram">
+		<div class="card">
+			<img src="image/testimonials-4.jpg">
+				<div class="item">
+					<div class="icon">
+						<i class="bi bi-heart heart"></i>
+						<i class="bi bi-heart-fill fill"></i>
+						<p class="value">999 likes</p>
+					</div>
+				</div>
+				
+					
+						
+					
+					
+					
+		</div>
+	</section>
+		
+	 <script>
+			let insta=document.getElementsByClassName("heart")[0];
+			
+			insta.addEventListener("click",increase)
+				function increase(){
+				 let par=this.parentNode;
+				 let show=par.querySelector(".fill");
+				 show.classList.add("insta");
+				 let val=this.parentNode.getElementsByClassName("value")[0];
+				 let count=val.innerHTML;
+				 let counts=parseInt(count);
+				 counts+=1;
+				 val.innerHTML=counts+" likes";
+				 
+				 
+			}
+			 let hide=document.getElementsByClassName("fill")[0];
+			 hide.addEventListener("click",decrease)
+			 function decrease(){
+			  hide.classList.remove("insta");
+			  let val=this.parentNode.getElementsByClassName("value")[0];
+				 let count=val.innerHTML;
+				 let counts=parseInt(count);
+				 counts-=1;
+				 val.innerHTML=counts+" likes";
+			  }
+		</script>
+		
+	 </body>
+</html>
